@@ -1,0 +1,55 @@
+.manage {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5rem;
+}
+
+.question {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  border: 2px solid yellow;
+  margin-bottom: 1rem;
+  border-radius: 500px 500px 500px 500px;
+  padding: 1rem;
+}
+
+.option {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid yellow;
+  cursor: pointer;
+  border-radius: 500px 500px 500px 500px;
+  padding: 1rem;
+}
+
+.option:hover {
+  color: yellow;
+}
+
+.correct {
+  background-color: green;
+  transition: background-color 1s ease;
+}
+
+.incorrect {
+  background-color: red;
+  transition: background-color 1s ease;
+}
+
+@media (max-width: 908px) or (orientation : portrait) {
+  .manage {
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .question {
+    font-size: 1.5rem;
+  }
+
+  .option {
+    font-size: 1rem;
+  }
+}

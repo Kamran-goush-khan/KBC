@@ -1,0 +1,24 @@
+.nav {
+    background-color: rgb(52, 52, 168);
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    padding: 1rem auto;
+    margin: auto;
+    color: yellow;
+    font-size: 1.5rem;
+}
+
+ul li {
+    list-style: none;
+    padding: auto;
+    margin: auto;
+}
+
+.hint , .quit {
+    cursor: pointer;
+
+}

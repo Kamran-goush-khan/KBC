@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import OpeningImage from './components/UserInterface/OpeningImage';
+import Question from './components/UserInterface/Question';
+import { authSliceAction } from './store/slice/authSlice';
+import Prize from './components/prize/prize';
+import Restart from './components/help/Restart';
+import Header from './components/help/Header';
 
 function App() {
+  const showLogo = useSelector((state) => state.auth.isLoggedIn);
+  const win = useSelector((state) => state.auth.isWin);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {!showLogo && !win && <OpeningImage />}
+      {showLogo && !win && <Header />}
+      {showLogo && !win && <Prize />}
+      {showLogo && !win && <Question />}
+      {showLogo && win && <Restart />}
     </div>
   );
 }

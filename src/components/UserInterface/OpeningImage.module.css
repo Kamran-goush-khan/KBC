@@ -1,0 +1,57 @@
+.logoImage {
+  background-image: url('../../assests/kbcLogo.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+form input {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    border: none;
+    outline: none;
+    background-color:  rgb(79, 52, 105);
+    color: rgb(182, 182, 251);
+    padding: 0.5rem;
+    font-size: 20px;
+  }
+  
+  
+
+  button {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  form input:focus {
+    background-color: rgb(79, 52, 105);
+    box-shadow: none;
+  }
+  
+  form input:hover {
+    background-color: rgb(79, 52, 105);
+    border-bottom: none;
+  }
+  
+
+@media (max-widht: 908px) {
+  .logoImage {
+    height: 100%;
+    width: 40%;
+  }
+  form input {
+    margin: 1rem 2rem;
+  }
+  button {
+    bottom: 0.5rem;
+    margin : auto 28rem;
+  }
+}
