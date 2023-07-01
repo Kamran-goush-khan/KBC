@@ -147,14 +147,14 @@ const Question = () => {
     fetch('https://opentdb.com/api.php?amount=15&difficulty=easy&type=multiple')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.results);
+        // console.log(data.results);
         setLoadedQuestion(data.results);
         setTimeout(() => {
           setShowQuestionItem(true);
         },);
       })
       .catch((error) => {
-        console.log('Error fetching quiz data:', error);
+        // console.log('Error fetching quiz data:', error);
       });
   }, []);
 
